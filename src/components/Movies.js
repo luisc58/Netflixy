@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
+import Movie from './Movie';
 import FontAwesomeIcon from './FontAwesomeIcon';
 import StyledHeader from './StyledHeader';
 import StyledHeaderTitle from './StyledHeaderTitle';
 import StyledHorizontalScroll from '../styled/StyledHorizontalScroll';
+import StyledFooter, { StyledLargeBtn } from '../styled/StyledFooter';
 import { movies } from '../staticData';
 
 const Movies = () => (
@@ -15,17 +17,18 @@ const Movies = () => (
 		{/* the list of movies */}
 		<StyledHorizontalScroll>
 			{movies.map((movie) => (
-				<div
-					style={{
-						border: '1px solid red',
-						margin: '1rem'
-					}}
+				<Movie
 					key={movie.id}
-				>
-					{movie.name}
-				</div>
+					poster={movie.poster}
+					name={movie.name}
+					duration={movie.duration}
+					year={movie.year}
+				/>
 			))}
 		</StyledHorizontalScroll>
+		<StyledFooter>
+			<StyledLargeBtn>Get Recommended Movies</StyledLargeBtn>
+		</StyledFooter>
 	</Fragment>
 );
 
