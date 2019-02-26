@@ -1,7 +1,16 @@
 import React from 'react';
+import StyledHeader from './StyledHeader';
+import FontAwesomeIcon from './FontAwesomeIcon';
+import StyledHeaderLink from '../styled/StyledHeaderLink';
 
 const MovieDetails = () => {
-	return <div>Movie Details</div>;
+	return (
+		<StyledHeader>
+			<StyledHeaderLink href="/">
+				<FontAwesomeIcon icon="chevron-left" text="Go back" />
+			</StyledHeaderLink>
+		</StyledHeader>
+	);
 };
 
 export default MovieDetails;

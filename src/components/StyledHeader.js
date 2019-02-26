@@ -5,6 +5,7 @@ const StyledHeader = styled.header`
 	display: flex;
 	color: #8b9095;
 	font-size: 0.8rem;
+	padding: 1rem;
 	align-items: center;
 `;
 

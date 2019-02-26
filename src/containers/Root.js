@@ -7,6 +7,7 @@ import store from '../store';
 import DevTools from './DevTools';
 import App from '../components/App';
 import StyledContainer from '../styled/StyledContainer';
+
 const Root = () => {
 	return (
 		<Provider store={store}>
@@ -15,7 +16,7 @@ const Root = () => {
 					<Router>
 						<App />
 					</Router>
-					<DevTools />
+					{/* <DevTools /> */}
 				</StyledContainer>
 			</ThemeProvider>
 		</Provider>
