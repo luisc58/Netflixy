@@ -6,7 +6,7 @@ import { apiEnd, apiStart } from '../actions/apiActions';
 //axios default config
 axios.defaults.baseURL = 'https://api.myjson.com/bins/';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
-axios.defaults.header.common['Authorization'] = `Bearer ${'fakeAcessToken'}`;
+axios.defaults.headers.common['Authorization'] = `Bearer ${'fakeAccessToken'}`;
 
 // Middleware implementation;
 

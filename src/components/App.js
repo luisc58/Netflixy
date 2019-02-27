@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Movies from './Movies';
+import MoviesContainer from '../containers/MoviesContainer';
 import MovieDetails from './MovieDetails';
 import StyledMovieContainer from '../styled/StyledMovieContainer';
 import { createGlobalStyle } from 'styled-components';
@@ -29,7 +29,7 @@ const App = () => {
 	return (
 		<StyledMovieContainer>
 			<GlobalStyle />
-			<Route exact path="/" component={Movies} />
+			<Route exact path="/" component={MoviesContainer} />
 			<Route exact path="/movies/:id" component={MovieDetails} />
 		</StyledMovieContainer>
 	);
