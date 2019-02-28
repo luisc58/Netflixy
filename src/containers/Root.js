@@ -1,12 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import theme from '../constants/theme';
 import store from '../store';
 import DevTools from './DevTools';
-import App from '../components/App';
 import StyledContainer from '../styled/StyledContainer';
+import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import theme from '../constants/theme';
+import App from '../components/App';
 
 const Root = () => {
 	return (
@@ -17,6 +19,7 @@ const Root = () => {
 						<App />
 					</Router>
 					<DevTools />
+					<ToastContainer />
 				</StyledContainer>
 			</ThemeProvider>
 		</Provider>
