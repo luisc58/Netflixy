@@ -6,6 +6,8 @@ import StyledHeaderTitle from './StyledHeaderTitle';
 import StyledHorizontalScroll from '../styled/StyledHorizontalScroll';
 import StyledFooter, { StyledLargeBtn } from '../styled/StyledFooter';
 import HelpMenuContainer from '../containers/HelpMenuContainer';
+import StyledLoader from '../styled/StyledLoader';
+import StyledMovieLink from '../styled/StyledMovieLink';
 
 class Movies extends React.Component {
 	componentDidMount() {
@@ -21,15 +23,21 @@ class Movies extends React.Component {
 				</StyledHeader>
 				{/* the list of movies */}
 				<StyledHorizontalScroll>
-					{this.props.movies.map((movie) => (
-						<Movie
-							key={movie.id}
-							name={movie.name}
-							poster={movie.poster}
-							duration={movie.duration}
-							year={movie.year}
-						/>
-					))}
+					{this.props.loading ? (
+						<StyledLoader />
+					) : (
+						this.props.movies.map((movie) => (
+							<StyledMovieLink href={`/movies/${movie.id}`} key={movie.id}>
+								<Movie
+									key={movie.id}
+									name={movie.name}
+									poster={movie.poster}
+									duration={movie.duration}
+									year={movie.year}
+								/>
+							</StyledMovieLink>
+						))
+					)}
 				</StyledHorizontalScroll>
 				<StyledFooter>
 					<StyledLargeBtn>Get Recommended Movies</StyledLargeBtn>

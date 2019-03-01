@@ -4,8 +4,7 @@ import { GET_MOVIES, SET_MOVIES } from '../constants/actionTypes';
 
 export default handleActions(
 	{
-		[SET_MOVIES]: (state, action) => action.payload,
-		[GET_MOVIES]: (state, action) => state
+		[SET_MOVIES]: (state, action) => action.payload
 	},
 	{}
 );
